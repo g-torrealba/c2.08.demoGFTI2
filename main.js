@@ -7,29 +7,29 @@
  * Se requiere calcular el precio de venta de la ropa, usando herencia
  */
 class Cl_mRopa {
-   constructor(nombre = "", costo = "") {
-      this.nombre = nombre;
-      this.costo = costo;
-   }
+  constructor(nombre = "", costo = "") {
+    this.nombre = nombre;
+    this.costo = costo;
+  }
 
-   precio() {
-      return this.costo + this.ganancia();
-   }
+  precio() {
+    return this.costo + this.ganancia();
+  }
 
-   ganancia() {
-      return this.costo * 0.2;
-   }
+  ganancia() {
+    return this.costo * 0.2;
+  }
 }
 
 class Cl_mIntimo extends Cl_mRopa {
-   constructor(nombre = "", costo = "", sexo = "") {
-      super(nombre, costo);
-      this.sexo = sexo;
-   }
+  constructor(nombre = "", costo = "", sexo = "") {
+    super(nombre, costo);
+    this.sexo = sexo;
+  }
 
-   ganancia() {
-      return this.costo * (this.sexo === "M" ? 0.3 : 0.4);
-   }
+  ganancia() {
+    return this.costo * (this.sexo === "M" ? 0.3 : 0.4);
+  }
 }
 
 let prenda1 = new Cl_mRopa("Pantalón", 10);
@@ -37,5 +37,5 @@ let prenda2 = new Cl_mIntimo("Brasier", 20, "F");
 
 let salida = document.getElementById("app");
 salida.innerHTML = "Resultados:";
-salida.innerHTML += "<br>Precio $$ 1= " + prenda1.precio();
-salida.innerHTML += "<br>Precio $$ 2= " + prenda2.precio();
+salida.innerHTML += "<br>Precio $$ 1 $$= " + prenda1.precio();
+salida.innerHTML += "<br>Precio $$ 2 $$= " + prenda2.precio();
