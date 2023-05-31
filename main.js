@@ -37,5 +37,5 @@ let prenda2 = new Cl_mIntimo("Brasier", 20, "F");
 
 let salida = document.getElementById("app");
 salida.innerHTML = "Resultados:";
-salida.innerHTML += "<br>Precio $$ 1 $$= " + prenda1.precio();
-salida.innerHTML += "<br>Precio $$ 2 $$= " + prenda2.precio();
+salida.innerHTML += "<br>$$ Precio $$ 1 $$= " + prenda1.precio();
+salida.innerHTML += "<br>$$ Precio $$ 2 $$= " + prenda2.precio();
